@@ -1,6 +1,6 @@
 # CRACformer
 
-A Cross-attention Convolution Transformer for Human Pose Recognition
+A Cross-attention Convolution-Transformer for Human Pose Recognition
 ## Usage
 
 ```python
