@@ -11,4 +11,4 @@ model = cracformer((width,height),number_classes).to(DEVICE)
 
 ## Credits
 
-The code is inspired from [CoAtNet](https://github.com/chinhsuanwu/coatnet-pytorch})
+The code is inspired from [CoAtNet](https://github.com/chinhsuanwu/coatnet-pytorch)
