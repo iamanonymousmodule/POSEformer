@@ -111,7 +111,7 @@ class MCB(nn.Module):
             return x + self.conv(x)
 
         
-class SSB(nn.Module):
+class CAB(nn.Module):
     def __init__(self, inp, oup, image_size, heads=8, dim_head=32, dropout=0.):
         super().__init__()
         inner_dim = dim_head * heads
@@ -218,7 +218,7 @@ class LoGo(nn.Module):
             self.pool2 = nn.MaxPool2d(3, 2, 1)
             self.proj = nn.Conv2d(inp, oup, 1, 1, 0, bias=False)
 
-        self.attn = SSB(inp, oup, image_size, heads, dim_head, dropout)
+        self.attn = CAB(inp, oup, image_size, heads, dim_head, dropout)
         self.ff = FFB(oup, hidden_dim, dropout)
 
         self.attn = CustomSequential([
